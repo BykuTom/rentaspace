@@ -1,0 +1,12 @@
+{
+  "name": "rentaspace",
+  "version": "1.0.0",
+  "description": "A property rental app, a portfolio project.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Tomasz Wolak",
+  "license": "MIT"
+}
