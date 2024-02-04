@@ -4,10 +4,13 @@ const userSchema = new mongoose.Schema({
   name: {
     type: String,
     required: [true, "A User must have a name"],
-    unique: true,
+    unique: [true, "User Name already exists"],
   },
-  rating: { type: Number, default: 4.5 },
-  price: { type: Number, required: [true, "A User must have a price"] },
+  email: {
+    type: String,
+    required: [true, "User must have an email"],
+    unique: [true, "User email already exists"],
+  },
 });
 
 const User = mongoose.model("User", userSchema);
