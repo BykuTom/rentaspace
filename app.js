@@ -1,15 +1,14 @@
 const express = require("express");
 
+const userRouter = require(`./routes/userRoutes`);
+
 const app = express();
 
-app.get("/", (request, response) => {
-  response.status(200).send("GET METHOD RECIEVED");
+app.use((request, response, next) => {
+  request.requestTime = new Date().toISOString();
+  next();
 });
 
-app.post("/", (request, response) => {
-  response.status(200).send("POST METHOD RECIEVED");
-});
+app.use("/api/v1/users", userRouter);
 
-app.listen(3000, () => {
-  console.log("Listening on http://localhost:3000");
-});
+module.exports = app;
