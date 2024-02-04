@@ -13,7 +13,7 @@ mongoose.connect(DB, {}).then(() => {
   console.log("Database connection succesful");
 });
 
-const port = 3000;
+const port = 5000;
 app.listen(port, () => {
   console.log(`App running on  http://localhost:${port}/`);
 });
