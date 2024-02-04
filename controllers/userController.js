@@ -1,3 +1,5 @@
+const User = require("../models/userModel");
+
 exports.getAllUsers = (request, response) => {
   response
     .status(500)
